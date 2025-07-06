@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Engineering Lab Report</title>
+    <style>
+        /* Global Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #495057;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        h1, h2, h3 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #6c5ce7;
+            margin-bottom: 40px;
+            font-size: 2.8rem;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, #6c5ce7, #a29bfe);
+            border-radius: 4px;
+        }
+        
+        h2 {
+            margin-top: 50px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e9ecef;
+            color: #6c5ce7;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
+        
+        p {
+            margin-bottom: 18px;
+            color: #6c757d;
+        }
+        
+        /* Experiment Sections */
+        .experiment {
+            margin-bottom: 60px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid #f1f3f5;
+        }
+        
+        .experiment:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: #e9ecef;
+        }
+        
+        /* Experiment 1 Styles */
+        .text-formatting b {
+            color: #e84393;
+            font-weight: 600;
+        }
+        
+        .text-formatting i {
+            color: #0984e3;
+            font-style: italic;
+        }
+        
+        .text-formatting u {
+            color: #00b894;
+            text-decoration: underline;
+        }
+        
+        .text-formatting a {
+            color: #6c5ce7;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .text-formatting a:hover {
+            color: #a29bfe;
+        }
+        
+        .text-formatting a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #a29bfe;
+            transition: width 0.3s ease;
+        }
+        
+        .text-formatting a:hover::after {
+            width: 100%;
+        }
+        
+        .image-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid #f1f3f5;
+        }
+        
+        .image-container img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        /* Experiment 2 Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid #f1f3f5;
+        }
+        
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #f1f3f5;
+        }
+        
+        th {
+            background-color: #6c5ce7;
+            color: white;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #f1f3f5;
+            transform: scale(1.005);
+            transition: all 0.2s ease;
+        }
+        
+        .courses-list {
+            margin: 25px 0;
+            padding-left: 0;
+            list-style-type: none;
+        }
+        
+        .courses-list li {
+            margin-bottom: 12px;
+            padding: 12px 15px;
+            position: relative;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #a29bfe;
+        }
+        
+        .courses-list li:hover {
+            transform: translateX(10px);
+            background-color: #f1f3f5;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Experiment 3 Styles */
+        .signup-form {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 35px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f3f5;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: #495057;
+        }
+        
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+        }
+        
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            border-color: #a29bfe;
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+            outline: none;
+            background-color: white;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #6c5ce7, #8476e8);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #5d4bec, #7566e0);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 25px;
+            color: #adb5bd;
+            font-size: 15px;
+            border-top: 1px solid #f1f3f5;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .experiment {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        .experiment:nth-child(1) { animation-delay: 0.1s; }
+        .experiment:nth-child(2) { animation-delay: 0.3s; }
+        .experiment:nth-child(3) { animation-delay: 0.5s; }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .experiment {
+                padding: 20px;
+            }
+            
+            th, td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Engineering Lab</h1>
+        
+        <div class="experiment">
+            <h2>Experiment 1: Basic HTML Formatting</h2>
+            <div class="text-formatting">
+                <p>This is a normal paragraph demonstrating basic HTML formatting. <b>This text is bold</b>, <i>this text is italicized</i>, and <u>this text is underlined</u>.</p>
+                
+                <p>Here's a link to <a href="https://www.nationalgeographic.com/animals" target="_blank">NAT GEO Animal</a></p>
+                
+                <div class="image-container">
+                    <img src="foxy.jpg" alt="Sample Image">
+                </div>
+            </div>
+        </div>
+        
+        <div class="experiment">
+            <h2>Experiment 2: Table and List </h2>
+            
+            <h3>Student Information Table</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Semester</th>
+                        <th>GPA</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CSE101</td>
+                        <td>Oasif Ahmed Rikto</td>
+                        <td>Computer Science</td>
+                        <td>5th</td>
+                        <td>3.82</td>
+                        <td>ahmedrikto150@gmai.com</td>
+                    </tr>
+                    <tr>
+                        <td>EEE102</td>
+                        <td>Rocky Chowdhury</td>
+                        <td>Electrical Engineering</td>
+                        <td>4th</td>
+                        <td>3.91</td>
+                        <td>rockycho000@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>ME103</td>
+                        <td>Mubassir Chopol</td>
+                        <td>Mechanical Engineering</td>
+                        <td>6th</td>
+                        <td>3.67</td>
+                        <td>mubassirchopol@gmai.com</td>
+                    </tr>
+                    <tr>
+                        <td>CSE104</td>
+                        <td>Imtiaz Tamim</td>
+                        <td>Computer Science</td>
+                        <td>3rd</td>
+                        <td>4.00</td>
+                        <td>ittamim999@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>CE105</td>
+                        <td>Ahsanul Hossain Jony</td>
+                        <td>Civil Engineering</td>
+                        <td>7th</td>
+                        <td>3.75</td>
+                        <td>ahsanuljony789@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>CHE106</td>
+                        <td>Imran Hossain</td>
+                        <td>Chemical Engineering</td>
+                        <td>5th</td>
+                        <td>3.88</td>
+                        <td>imranhossain456@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>BIO107</td>
+                        <td>Ahmed</td>
+                        <td>Biotechnology</td>
+                        <td>4th</td>
+                        <td>3.92</td>
+                        <td>ahmedrk451@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Educational Courses List</h3>
+            <ul class="courses-list">
+                <li>Web Engineering (CS-401) - Learn modern web development techniques</li>
+                <li>Data Structures and Algorithms (CS-301) - Fundamental computer science concepts</li>
+                <li>Database Systems (CS-302) - SQL and NoSQL database management</li>
+                <li>Computer Networks (CS-303) - Networking protocols and architectures</li>
+                <li>Artificial Intelligence (CS-501) - Machine learning and neural networks</li>
+                <li>Software Engineering (CS-402) - Software development lifecycle</li>
+                <li>Operating Systems (CS-304) - Process management and memory allocation</li>
+                <li>Computer Architecture (CS-305) - Hardware and software interface</li>
+                <li>Human-Computer Interaction (CS-403) - UX/UI design principles</li>
+                <li>Cloud Computing (CS-502) - Distributed systems and virtualization</li>
+                <li>Cybersecurity (CS-503) - Information security fundamentals</li>
+                <li>Mobile Application Development (CS-404) - iOS and Android programming</li>
+            </ul>
+        </div>
+        
+        <div class="experiment">
+            <h2>Experiment 3: User Sign Up Form</h2>
+            
+            <form class="signup-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Create a password (min 8 characters)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="university">University/Institution</label>
+                    <input type="text" id="university" name="university" placeholder="Where do you study?">
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="">Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        <option value="prefer-not-to-say">Prefer not to say</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                
+                <div class="form-group">
+                    <label for="interests">Areas of Interest (Select multiple)</label>
+                    <select id="interests" name="interests" multiple>
+                        <option value="web-dev">Web Development</option>
+                        <option value="mobile-dev">Mobile Development</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="ai-ml">AI/ML</option>
+                        <option value="cybersecurity">Cybersecurity</option>
+                        <option value="cloud-computing">Cloud Computing</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bio">Short Bio</label>
+                    <textarea id="bio" name="bio" rows="5" placeholder="Tell us about yourself, your skills and interests"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="terms" required> I agree to the Terms and Conditions and Privacy Policy
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="newsletter"> I want to receive newsletter and updates
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form> 
+        </div>
+        
+        <footer>
+            <p>Web Engineering Lab Report &copy; 2023 | Submitted by [Your Name] | Powered by WPS Office</p>
+        </footer>
+    </div>
+</body>
+</html>

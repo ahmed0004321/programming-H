@@ -1,0 +1,30 @@
+.oasif{
+    color:rgb(28, 44, 133);
+    text-align: justify;
+    margin: 20px;
+    border: 20px solid chocolate;
+    padding: 20px 20px;
+    border-radius: 10px 20px 30px 40px;
+    box-shadow: 10px 20px 30px rgb(34, 17, 23);
+    font-family: 'Courier New', Courier, monospace;
+}
+.ahmed{
+    color:cadetblue;
+    text-align: center;
+    font-family: monospace;
+    margin: 20px;
+    border: 20px solid rgb(84, 119, 154);
+    padding: 20px 20px;
+    border-radius: 20px 40px 50px;
+    box-shadow: 10px 30px 40px;
+}
+.rikto{
+    color:rgb(34, 17, 21);
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 20px;
+    border: 20px solid rgb(57, 127, 144);
+    padding: 20px 20px;
+    border-radius: 20px 40px 50px;
+    box-shadow: 10px 30px 40px;
+}

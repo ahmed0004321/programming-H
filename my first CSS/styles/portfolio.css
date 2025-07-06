@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+li {
+    list-style: none;
+    padding-left: 40px;
+}
+.home-section{
+    display: flex;
+}
+.home-section li{
+    padding: 20px;
+    margin: 0px;
+    margin-right: 40px;
+}
+.navigation h1{
+    margin-top: 20px;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+     
+}
+button{
+    font-size: large;
+    font-family: "Winky Sans", sans-serif;;
+    border: 2px solid #16610E;
+    border-radius: 20px;
+    background-color:#FEFBC7 ;
+    box-shadow: 10px 20px 30px rgb(86, 85, 85);
+}
+.navigation h1{
+    padding-left: 40px;
+    font-size: 40px;
+}
+h1{
+    color: #FEFBC7;
+}
+span{
+    color: #06923E;
+}
+body{
+    background-color: #B0DB9C;
+    font-family: "Winky Sans", sans-serif;
+}
+.image-1 {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.image-1 ul, .image-2 ul{
+    font-size: 25px;
+    text-align: justify;
+    text-shadow: 4px 8px 16px;
+}
+img{
+    border: 10px solid #FEFBC7;
+    box-shadow: 10px 20px 30px #464535;;
+}
+.h1{
+    font-size: 60px;
+    animation: fadeInOut 5s infinite;
+    text-shadow: 10px 20px 30px black;
+}
+@keyframes fadeInOut {
+    0%, 100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+.image-2{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.image-container, .image-container-2{
+    display: flex;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #F0F2BD;
+    font-family: "Winky Sans", sans-serif;;
+}
+.footer-container-2 input[type="password"]{
+    width: 255px;
+    font-family: "Winky Sans", sans-serif;;
+}
+.footer-container-2 input[type="name"]{
+    width: 255px;
+    font-family: "Winky Sans", sans-serif;;
+}
+.footer-container-2 input{
+    margin-bottom: 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+}
+.footer-container-2 input[type="submit"]{
+    background-color: #06923E;
+    font-family: "Winky Sans", sans-serif;;
+}
+.footer-container-2 textarea{
+    border: none;
+    font-family: "Winky Sans", sans-serif;
+    width: 255px;
+}

@@ -1,0 +1,95 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe4ec, #e0f7fa);
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    padding: 40px;
+    color: #3d3d3d;
+}
+
+/* Floating Flowers */
+.flower {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Sakura.svg/120px-Sakura.svg.png') no-repeat center/contain;
+    animation: floatFlower 20s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes floatFlower {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(50vh) translateX(50px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(100vh) translateX(-50px) rotate(360deg);
+    }
+}
+
+/* Container for each team */
+ol {
+    background: linear-gradient(135deg, #ffffff, #ffe6fa);
+    padding: 30px 40px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    list-style-position: inside;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+/* Hover on whole card */
+ol:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Team Title */
+h3 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #e91e63;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ff80ab;
+}
+
+/* Driver name */
+ol > li {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 22px;
+    color: #8e24aa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Hover on driver */
+ol > li:hover {
+    color: #d44f7b;
+}
+
+/* Stats list */
+ul {
+    list-style-type: '🌸 ';
+    margin: 10px 0 20px 30px;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin-top: 8px;
+    color: #5d4037;
+    transition: color 0.3s ease;
+}
+
+/* Hover on stats */
+ul li:hover {
+    color: #6f7917;
+}
+

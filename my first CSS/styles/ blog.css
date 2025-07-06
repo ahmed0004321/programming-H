@@ -1,0 +1,36 @@
+h3{
+    font-size: 30px;
+    text-decoration: underline;
+    text-align: justify;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/*.second{
+    visibility: hidden
+}*/
+.blog{
+    background-color: rgba(136, 173, 173, 0.709);
+    margin: 20px;
+    border: 10px solid tomato;
+    box-shadow: 10px 20px 30px rgb(149, 120, 125);
+    border-radius: 20px;
+    padding: 10px
+}
+.incedent{
+    border: 1px solid purple;/* so akhn oi line ta inline element hoe ace..
+    inline element er moddhe hight width aigula kaj kore na jodi aigula kaj korate chaw taile display block kore daw*/
+    /*display: block;*/
+    height: 200px;
+    /*abr margin er khetre inline element e left r right kaj korbe upore r niche korbe na*/
+    margin: 50px;
+}
+header{
+    height: 800px;
+    background-color: bisque;
+    background-image: url(../../home.png);
+    /*background-repeat: no-repeat;*/
+    /*background-repeat: repeat-y;*/
+    /*background-size: cover;*/
+    /*background-size: contain;*/
+    /*background-size: 200px;*/
+    background-position: center;
+}

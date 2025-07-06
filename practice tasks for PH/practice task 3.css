@@ -1,0 +1,142 @@
+#h1 {
+    color: #FEF3E2;
+    background-color: #626F47;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 10px 20px 30px #626F47;
+    text-shadow: 10px 20px 10px #0a0501;
+}
+body{
+    background-color: #E9F5BE;
+}
+.paragraph{
+    color: #FEF3E2;
+    background-color: #393E46;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 10px 20px 30px #393E46;
+    text-shadow: 10px 20px 10px black;
+}
+.name{
+    color: #F2EFE7;
+    background-color: #169976;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 10px 20px 30px #626F47;
+    text-shadow: 10px 20px 10px #0a0501;
+}
+.list{
+    color: #FEF3E2;
+    background-color: #8E7DBE;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 10px 20px 30px #5c5076;
+    text-shadow: 10px 20px 10px #0a0501; 
+}
+.lando{
+    color: #FEF3E2;
+    background-color: #7AE2CF;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 10px 20px 30px #6b657a;
+    text-shadow: 10px 20px 10px #0a0501;
+}
+.russell{
+    color: #FEF3E2;
+    background-color: #7AE2CF;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 10px 20px 30px #445a65;
+    text-shadow: 10px 20px 10px #0a0501;
+}
+.lewis{
+    color: #FEF3E2;
+    background-color: #7AE2CF;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 10px 20px 30px #565353;
+    text-shadow: 10px 20px 10px #0a0501;
+}
+.hemilton{
+    color: #FEF3E2;
+    background-color: #F7374F;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 10px 20px 30px #6b4c4c;
+    text-shadow: 10px 20px 10px #0a0501;
+}
+.oscar{
+    color: #FEF3E2;
+    background-color: #7AE2CF;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 10px 20px 30px #6b4c4c;
+    text-shadow: 10px 20px 10px #0a0501;
+}
+.norris{
+    color: #FEF3E2;
+    background-color: #16FF00;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 10px 20px 30px #6b4c4c;
+    text-shadow: 10px 20px 10px #0a0501;
+}
+.goarge{
+    color: #FEF3E2;
+    background-color: #60B5FF;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 10px 20px 30px #5c5a5a;
+    text-shadow: 10px 20px 10px #0a0501;
+}
+.piastri{
+    color: #FEF3E2;
+    background-color: #FF8225;
+    border: 5px solid transparent;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 20px;
+    box-shadow: 10px 20px 30px #5c5a5a;
+    text-shadow: 10px 20px 10px #0a0501;
+}
+.button{
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}  
+button:active {
+    background-color: #3e8e41;
+    transform: translateY(0);
+} 
